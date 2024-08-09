@@ -1,4 +1,4 @@
-export interface Welcome {
+export interface Weather {
   cod: string;
   message: number;
   cnt: number;
