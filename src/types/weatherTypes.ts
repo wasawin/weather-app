@@ -1,10 +1,11 @@
-export interface Weather {
+export default interface WeatherTypes {
   coord: Coord;
-  weather: WeatherElement[];
+  weather: Weather[];
   base: string;
   main: Main;
   visibility: number;
   wind: Wind;
+  rain: Rain;
   clouds: Clouds;
   dt: number;
   sys: Sys;
@@ -34,6 +35,10 @@ export interface Main {
   grnd_level: number;
 }
 
+export interface Rain {
+  '1h': number;
+}
+
 export interface Sys {
   type: number;
   id: number;
@@ -42,7 +47,7 @@ export interface Sys {
   sunset: number;
 }
 
-export interface WeatherElement {
+export interface Weather {
   id: number;
   main: string;
   description: string;
@@ -52,4 +57,5 @@ export interface WeatherElement {
 export interface Wind {
   speed: number;
   deg: number;
+  gust: number;
 }

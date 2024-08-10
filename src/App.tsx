@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { WeatherTypes } from './types/WeatherTypes';
+import WeatherTypes from './types/WeatherTypes';
 import axios from 'axios';
-import { WiCelsius, WiDegrees } from 'react-icons/wi';
 export default function App() {
   const [weather, setWeather] = useState<WeatherTypes | null>(null);
   const [city, setCity] = useState<string>('London');
@@ -61,7 +60,6 @@ export default function App() {
 
               <div className="text-6xl md:text-7xl lg:text-8xl flex w-full h-28 items-center justify-center ">
                 {weather?.main.temp.toFixed(1)}°
-                {/* <WiCelsius className="size-14" /> */}
               </div>
               <p>{weather?.weather[0].description}</p>
             </div>
